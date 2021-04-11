@@ -110,7 +110,7 @@ async def convert_html_to_pdf(html, pdf_file_path):
         page = await browser.newPage()
         await page.goto('file://{}'.format(html_file_path))
         await page.emulateMedia('print')
-        await asyncio.sleep(5)
+        await asyncio.sleep(settings.PDF_RENDER_DELAY_SECS)
         await page.pdf({'path': pdf_file_path, **settings.PYPPETEER_PDF_OPTIONS})
         await browser.close()
         os.remove(html_file_path)

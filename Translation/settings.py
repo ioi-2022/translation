@@ -193,6 +193,8 @@ MONITOR_ADDRESS=os.environ.get('MONITOR_URL')
 DRAFT_PRINTER=os.environ.get('DRAFT_PRINTER')
 FINAL_PRINTER=os.environ.get('FINAL_PRINTER')
 
+PDF_RENDER_DELAY_SECS=int(os.environ.get('PDF_RENDER_DELAY_SECS', 5))
+
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
