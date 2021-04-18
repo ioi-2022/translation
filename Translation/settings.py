@@ -37,6 +37,7 @@ PYPPETEER_PDF_OPTIONS = {
         'bottom': '1in',
     },
     'format': 'A4',
+    'printBackground': True,
 }
 PYPPETEER_PDF_RENDER_DELAY_SECS=int(os.environ.get('PYPPETEER_PDF_RENDER_DELAY_SECS', 5))
 
