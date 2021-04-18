@@ -38,6 +38,7 @@ PYPPETEER_PDF_OPTIONS = {
     },
     'format': 'A4',
 }
+PYPPETEER_PDF_RENDER_DELAY_SECS=int(os.environ.get('PYPPETEER_PDF_RENDER_DELAY_SECS', 5))
 
 
 # Application definition
@@ -192,8 +193,6 @@ MONITOR_ADDRESS=os.environ.get('MONITOR_URL')
 
 DRAFT_PRINTER=os.environ.get('DRAFT_PRINTER')
 FINAL_PRINTER=os.environ.get('FINAL_PRINTER')
-
-PDF_RENDER_DELAY_SECS=int(os.environ.get('PDF_RENDER_DELAY_SECS', 5))
 
 
 STATIC_URL = '/static/'
